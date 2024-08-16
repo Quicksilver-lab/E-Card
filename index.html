@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Create and Send Beautiful E-Cards</h1>
+    </header>
+
+    <main>
+        <div class="card-generator">
+            <form id="ecardForm">
+                <div class="form-group">
+                    <label for="cardType">Choose Card Type:</label>
+                    <select id="cardType">
+                        <option value="birthday">Birthday</option>
+                        <option value="holiday">Holiday</option>
+                        <option value="love">Love</option>
+                        <option value="celebration">Celebration</option>
+                        <!-- Add more options here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Enter Your Message:</label>
+                    <textarea id="message" rows="4" placeholder="Type your message here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="quoteSelection">Select a Motto or Quote:</label>
+                    <select id="quoteSelection">
+                        <option value="Believe in yourself.">"Believe in yourself."</option>
+                        <option value="Every day is a new beginning.">"Every day is a new beginning."</option>
+                        <option value="Spread love wherever you go.">"Spread love wherever you go."</option>
+                        <option value="Life is beautiful, enjoy every moment.">"Life is beautiful, enjoy every moment."</option>
+                        <option value="Kindness is the language of the heart.">"Kindness is the language of the heart."</option>
+                        <option value="Happiness is a journey, not a destination.">"Happiness is a journey, not a destination."</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="recipientEmail">Recipient's Email:</label>
+                    <input type="email" id="recipientEmail" placeholder="Enter recipient's email">
+                </div>
+
+                <button type="button" onclick="generateCard()">Generate E-Card</button>
+            </form>
+        </div>
+
+        <div id="previewCard" class="card-preview">
+            <!-- Preview of the e-card will be displayed here -->
+        </div>
+
+        <button id="sendButton" type="button" onclick="sendCard()">Send E-Card</button>
+        <button id="downloadButton" type="button" onclick="downloadCard()">Download E-Card as GIF</button>
+
+    </main>
+
+    <footer>
+        <p>© 2024 E-Card Generator</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
